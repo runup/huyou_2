@@ -1,0 +1,29 @@
+ <h3>营养价值</h3>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按物种命名法，常山胡柚的植物学名为。胡柚起源于常山县青石乡胡家村，是优良的柚子自然杂交群体品种，树势强健，叶色浓绿肥厚，枝叶繁茂，适应性广，耐粗放管理，抗寒性强。尤其是果实极耐贮藏，一般可贮到翌年四月柑桔市场淡季上市，风味不变，对调节和丰富市场供应具有意义。 按物种命名法，常山胡柚的植物学名为：Citrus Paradisi cv.Changshanhuyou。胡柚起源于常山县青石乡胡家村，是优良的柚子自然杂交群体品种，树势强健，叶色浓绿肥厚，枝叶繁茂，适应性广，耐粗放管理，抗寒性强。尤其是果实极耐贮藏，一般可贮到翌年四月柑桔市场淡季上市，风味不变，对调节和丰富市场供应具有意义
+
+ <h4>文章评论</h4>
+
+ <%@nutritions.each do |nutrition|%>
+ 	<div class="field-group">
+ 	    评论者：<%=nutrition.name%></br>
+ 		评论内容：<%=nutrition.comment%></br>
+ 		<%= link_to '删除', nutrition_path(nutrition), method: :delete, data: { confirm: 'Are you sure?' } %>
+ 	</div>
+ <%end%>
+
+
+<%= form_for(@nutrition) do |n| %>
+  <p>
+    <%= n.label :name %><br>
+    <%= n.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= n.label :comment %><br>
+    <%= n.text_area :comment %>
+  </p>
+ 
+  <p>
+    <%= n.submit "提交"%>
+  </p>
+<% end %>

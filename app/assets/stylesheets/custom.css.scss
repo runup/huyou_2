@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+.field-group p{
+  text-align:left;
+  margin-left:10px;
+}
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;

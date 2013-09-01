@@ -1,5 +1,9 @@
 @import "bootstrap";
 /* universal */
+
+
+
+
 html {
 overflow-y: scroll;
 }
@@ -151,3 +155,38 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
+
+
+ .field-group{
+  text-align: left;
+  border-radius: 5px;
+  min-height: 30px;
+  line-height: 30px;
+  border: 1px solid #D5D5D5;
+}
+/*
+.field-group:hover {
+  background: #ddd;
+}*/
+.field-group h1,.field-group h2 ,.field-group h3,.field-group h4,.field-group h5,.field-group h6, .field-group-title{
+  height: 25px;
+  color: #333;
+  margin-top:0px;
+  padding:3px  6px 8px 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#E9E9E9));
+  background-image: -moz-linear-gradient(top, #FAFAFA, #E9E9E9);
+    background-image: -ms-linear-gradient(top, #FAFAFA, #E9E9E9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+  border: 1px solid #D5D5D5;
+  border-width: 1px !important;
+  border-style: solid !important;
+  -webkit-border-radius: 4px 4px 0 0 !important;
+  -moz-border-radius: 4px 4px 0 0 !important;
+  border-radius: 4px 4px 0 0 !important;
+  font-size: 18px;
+}
+.field-group p{
+  text-align:left;
+  margin-left:10px;
+}

@@ -1,5 +1,6 @@
 Chapter3::Application.routes.draw do
  
+# resources :nutritions
  root to: 'static_pages#help'
  
  match '/help', to: 'static_pages#help'
@@ -9,6 +10,13 @@ Chapter3::Application.routes.draw do
  match '/introduction', to: 'static_pages#introduction'
  match '/video', to: 'static_pages#video'
  match '/test', to: 'static_pages#test'
+ match '/nutrition', to: 'static_pages#nutrition'
+  match '/history', to: 'static_pages#history'
+  match '/current', to: 'static_pages#current'
+
+resources :nutritions
+
+
 
 
 
