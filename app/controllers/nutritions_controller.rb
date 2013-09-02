@@ -14,10 +14,9 @@ class NutritionsController < ApplicationController
   
 
   def destroy
-
-    @nutrition = Nutrition.find(:id)
-      @nutrition.destroy
-      redirect_to nutrition_path
-    end 
+    @nutrition = Nutrition.find(params[:id])
+    @nutrition.destroy
+    redirect_to nutrition_path
+  end 
 
 end
